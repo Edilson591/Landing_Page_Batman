@@ -1,12 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page Batman</title>
     <link rel="stylesheet" href="dist/styles/main.css">
 </head>
+
 <body>
-    
+    <header class="header">
+        <div class="header__container">
+            <h1>
+                <img src="dist/imagens/batman_logo.png" alt="Logo Batman" class="header__logo">
+            </h1>
+            <nav class="header__nav">
+                <button id="btn-mobile" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="menu"
+                    aria-expanded="false">
+                    <span id="hamburguer"></span>
+                </button>
+                <ul class="header__links">
+                    <li class="header__links__item"><a href="#" class="text--link button">Sobre</a></li>
+                    <li class="header__links__item"><a href="#" class="text--link button">Galeria</a></li>
+                    <li class="header__links__item"><a href="#" class="text--link button">Noticias</a></li>
+                    <li class="header__links__item"><a href="#" class="text--link button">Loja</a></li>
+                    <li class="header__links__item"><a href="#" class="text--link button">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero__content">
+            <div class="hero__overlay">
+                <h2 class="title-destaque">Descubra a mundo do batman</h2>
+                <p class="text--small-destaque">Explore a história, os vilões e as aventuras do Cavaleiro das Trevas
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="about">
+        <h2 class="title">Sobre o Batman</h2>
+        <p class="text--big">Bem-vindo ao site do batman, o seu destino definitivo para tudo relacionado ao Cavaleiro
+            das Trevas. Nossa missão é explorar e celebrar o icônico universo do Batman, oferecendo uma rica coleção de
+            informações, análises e atualizações sobre o herói de Gotham. Desde as histórias clássicas dos quadrinhos
+            até as adaptações cinematográficas mais recentes, nosso site é um recurso abrangente para fãs novos e
+            veteranos. Mergulhe conosco na jornada de Bruce Wayne, descubra segredos dos bastidores, e fique por dentro
+            das últimas novidades sobre o mundo do Batman. Venha fazer parte da nossa comunidade de apaixonados pelo
+            herói que luta pela justiça na escuridão!</p>
+    </section>
+
+
+    <script src="dist/scripts/main.js"></script>
+
 </body>
+
 </html>

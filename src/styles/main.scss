@@ -1,0 +1,73 @@
+@use 'variaveis.scss';
+@use 'hero.scss';
+@use 'header.scss';
+@use 'about';
+
+@font-face {
+    font-family: Avenir, sans-serif;
+    src: url(../../assets/fonts/fonts/Avenir-Regular.woff2);
+    font-weight: 400;
+}
+@font-face {
+    font-family: Avenir, sans-serif;
+    src: url(../../assets/fonts/fonts/Avenir-Bold.woff2);
+    font-weight: 700;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Avenir,sans-serif;
+    list-style: none;
+    text-decoration: none;
+
+}
+
+
+body {
+    background-color: variaveis.$corDeFundo;
+}
+
+@mixin text($fontSize:16px) {
+    font-size: $fontSize;
+    color: variaveis.$corTextPrincipal;
+    font-weight: 700;
+}
+@mixin textDestaque($fontSize:16px) {
+    font-size: $fontSize;
+    color: variaveis.$corTextDestaque;
+    font-weight: 700;
+}
+
+.text--link {
+    @include text(18px)
+}
+.text--big {
+    @include text(15px)
+}
+.text--small {
+    @include text(12px)
+}
+.text--small-destaque {
+    @include textDestaque(12px)
+}
+.title-destaque {
+    @include textDestaque(16px)
+}
+
+.title {
+    @include text(20px)
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: variaveis.$corDeFundo;
+    border-radius: 4px;
+    width: 100%;
+}

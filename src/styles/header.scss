@@ -1,0 +1,166 @@
+@use "variaveis.scss";
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: transparent;
+    width: 100%;
+    padding: 0 36px;
+
+    @media (max-width:768px) {
+            backdrop-filter: blur(3px);
+            border-bottom: 2px solid;
+        &--is-active {
+            backdrop-filter: blur(3px);
+            height: 100vh;
+            transition: backdrop-filter 0.5s ease, height 0.5s ease;
+        }
+    }
+
+    #btn-mobile {
+        display: none;
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        margin-bottom: 10px;
+        transition: flex-direction 0.5s ease;
+
+        @media (max-width:768px) {
+            &--is-active {
+                flex-direction: column;
+                align-items: flex-start;
+                backdrop-filter: blur(3px);
+            }
+
+
+        }
+    }
+
+    &__logo {
+        max-width: 80px;
+        width: 100%;
+        margin: 5px;
+        transition: max-width 0.5s ease, margin 0.5s ease; 
+
+        @media (max-width:768px) {
+            margin: 0;
+            width: auto;
+
+
+        }
+    }
+
+    &__nav {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        transition: transform 0.5s ease;
+
+        &--is-active #hamburguer::after{
+            transform: rotate(-135deg);
+            top: -8px;
+        }
+        &--is-active #hamburguer::before{
+            transform: rotate(135deg);
+            
+        }
+
+
+    }
+
+
+    &__links {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 8px;
+        text-align: center;
+        width: 100%;
+        overflow-y: auto;
+        transition: top 0.5s ease, visibility 0.5s ease;
+
+        @media (max-width:768px) {
+            flex-direction: column;
+            width: 100%;
+            position: absolute;
+            top: -70vh;
+            justify-content: center;
+            z-index: 100;
+            visibility: visible;
+            overflow-y: auto;
+
+            &--is-active {
+                top:30vh;
+            }
+
+            &__item {
+                width: 80%;
+            }
+
+        }
+
+        &__item {
+            margin: 6px 6px;
+
+            a {
+                &:hover {
+                    color: lighten(variaveis.$corTextPrincipal, 20%);
+                }
+            }
+        }
+    }
+
+    @media (max-width:768px) {
+        #btn-mobile {
+            display: flex;
+            gap: .5rem;
+            border: none;
+            position: absolute;
+            top: 30px;
+            font-size: 1rem;
+            transform: scale(1.2);
+            background-color: variaveis.$corDeFundo;
+            padding: 6px;
+            border-radius: 20%;
+            cursor: pointer;
+            transition: background-color 0.5s ease; 
+        }
+
+        #hamburguer {
+            width: 20px;
+            border-top: 3px solid;
+            color: #ffffff;
+        }
+
+        .header__nav--is-active #hamburguer{
+            border-top: none;
+        }
+
+        #hamburguer::after,
+        #hamburguer::before {
+            content: "";
+            display: block;
+            position: relative;
+            width: 20px;
+            height: 3px;
+            margin-top: 5px;
+            background: currentColor;
+            transition: all .5s ease-in-out;
+        }
+    }
+}
+
+
+
+// header padding: 0
+// container flex-direction: column; backdrop-filter:blur(3px); height:100vh;
+// h1 img max-widtg: 150px; margin:0;
+// nav justify-content: center;
+// ul flex-direction: column; width:50%;
+// li width:50%;
