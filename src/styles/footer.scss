@@ -1,0 +1,38 @@
+@use 'variaveis.scss';
+
+.footer {
+    padding: 5.6vw;
+    width: 100%;
+    text-align: center;
+    &__container{
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+    }
+    &__logo {
+        width: 100px;
+    }
+    &__links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        &__item {
+            display: inline-block;
+            a {
+                display: block;
+                text-decoration: none;
+                padding: 8px 16px;
+
+                &:hover {
+                    color: lighten(variaveis.$corTextPrincipal, 20%);
+                }
+            }
+        }
+    }
+}
