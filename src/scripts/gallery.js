@@ -14,8 +14,7 @@ async function getBatmans() {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
         
-        const getResponse = await response.json()
-        console.log(getResponse)
+        const getResponse = await response.json();
         const imagesPerPage = 6;
         const pages = paginateImages(getResponse, imagesPerPage);
         

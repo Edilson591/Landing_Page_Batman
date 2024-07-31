@@ -7,24 +7,33 @@
     &__list {
         margin-top: 44px;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 24px;
         @media (max-width:768px) {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
         }
 
         &__item {
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            justify-content: space-between; 
+            height: 400px; 
+            padding: 20px;
+            border: 1px solid variaveis.$corTextSecundario;
+            background-color: variaveis.$corTextDestaque;
+            box-shadow: 0 4px 8px rgba(variaveis.$corTextDestaque,0.3);
+            overflow: hidden; 
+            border-radius: 8px;
             a {
                 &:hover {
                     color: lighten(variaveis.$corTextPrincipal, 20%);
                 }
             }
             img {
+                width: 100%;
                 max-height: 200px;
-                max-width: 100%;
+                overflow-y: hidden;
+                object-fit: cover;
                 border-radius: 4px;
             }
         }
@@ -32,5 +41,6 @@
 
     h2 {
         text-align: center;
+        margin: 24px 0;
     }
 }

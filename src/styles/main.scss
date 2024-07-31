@@ -60,7 +60,7 @@ body {
 }
 
 .title {
-    @include text(20px)
+    @include text(25px)
 }
 .title--small {
     @include text(16px)
@@ -75,5 +75,10 @@ body {
     background-color: variaveis.$corButtonPrimario;
     border-radius: 4px;
     width: 100%;
+}
+@media (max-width:768px) {
+    .title {
+        @include text(16px)
+    }
 }
 
