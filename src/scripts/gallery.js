@@ -16,7 +16,7 @@ async function getBatmans() {
         
         const getResponse = await response.json()
         console.log(getResponse)
-        const imagesPerPage = 9;
+        const imagesPerPage = 6;
         const pages = paginateImages(getResponse, imagesPerPage);
         
         getImagensBat(pages)
