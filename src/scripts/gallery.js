@@ -8,14 +8,14 @@ function paginateImages(images, imagesPerPage) {
 
 async function getBatmans() {
     try {
-        const response = await fetch("http://localhost:3000/batman-images")
-        const getResponse = await response.json()
-
+        const response = await fetch("https://api-batman-qdf2-7w0zeywkv-edilson591s-projects.vercel.app/batman-images")
+        
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
-
         
+        const getResponse = await response.json()
+        console.log(getResponse)
         const imagesPerPage = 9;
         const pages = paginateImages(getResponse, imagesPerPage);
         
