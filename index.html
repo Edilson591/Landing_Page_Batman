@@ -21,8 +21,8 @@
                 </button>
                 <ul class="header__links">
                     <li class="header__links__item"><a href="#about" class="text--link button">Sobre</a></li>
-                    <li class="header__links__item"><a href="#" class="text--link button">Galeria</a></li>
-                    <li class="header__links__item"><a href="#" class="text--link button">Noticias</a></li>
+                    <li class="header__links__item"><a href="#gallery" class="text--link button">Galeria</a></li>
+                    <li class="header__links__item"><a href="#noticias" class="text--link button">Noticias</a></li>
                     <li class="header__links__item"><a href="#" class="text--link button">Loja</a></li>
                     <li class="header__links__item"><a href="#" class="text--link button">Contato</a></li>
                 </ul>
@@ -56,31 +56,36 @@
         </div>
 
     </section>
-    <section class="gallery">
-        <nav class="gallery__tabs">
-            <button class="gallery__tabs__button" data-tab-button="page1">
-                
-            </button>
-            <button class="gallery__tabs__button" data-tab-button="page2">
-
-            </button>
-            <button class="gallery__tabs__button" data-tab-button="page3">
-                
-            </button>
-        </nav>
-        <ul class="gallery__list">
-            <li class="gallery__list__item"></li>
-            <li class="gallery__list__item"></li>
-            <li class="gallery__list__item"></li>
-            <li class="gallery__list__item"></li>
-            <li class="gallery__list__item"></li>
-            <li class="gallery__list__item"></li>
+    <section class="gallery" id="gallery">
+        <div class="gallery__container">
+            <!-- conteúdo vindo da api -->
+        </div>
+    </section>
+    <section class="noticias" id="noticias">
+        <h2 class="title">Principais noticias do universo do batman</h2>
+        <ul class="noticias__list">
+            <li class="noticias__list__item">
+                <img src="dist/imagens/imagem_noticia1.webp" alt="noticia 1">
+                <h3 class="title--small">DC admite que Batman quebraria regra de não matar no caso de um vilão</h3>
+                <p class="text--small">Batman segue fielmente sua regra de não matar vilões, nem mesmo o Coringa, mas a
+                    DC revelou que ele estaria disposto a assassinar</p>
+                <a href="https://www.terra.com.br/byte/dc-admite-que-batman-quebraria-regra-de-nao-matar-no-caso-de-um-vilao,ab2c345ca791810e11ba376f8b7a13f0kaw1mh70.html" target="_blank"  class="button text--link ">veja mais...</a>
+            </li>
+            <li class="noticias__list__item">
+                <img src="dist/imagens/imagem__noticia2.jpg" alt="noticia 1">
+                <h3 class="title--small">Batman 2 será filmado em 2025 e terá retorno do Pinguim de Colin Farrell</h3>
+                <p class="text--small">É oficial! As filmagens de Batman 2 vão acontecer em 2025 e Colin Farrell vai
+                    retornar como o Pinguim. Quem confirmou as informações foi o diretor Matt Reeves durante painel do
+                    filme na San Diego Comic-Con 2024.</p>
+                <a href="https://www.omelete.com.br/batman/batman-2-filmagens-2025-pinguim" target="_blank" class="button text--link ">veja mais...</a>
+            </li>
         </ul>
 
     </section>
 
 
     <script src="dist/scripts/main.js"></script>
+    <script src="dist/scripts/gallery.js"></script>
 
 </body>
 

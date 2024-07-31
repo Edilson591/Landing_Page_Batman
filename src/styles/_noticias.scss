@@ -1,0 +1,36 @@
+@use 'variaveis.scss';
+
+.noticias {
+    padding: 2vw 5.6vw;
+    min-height: 50vw;
+
+    &__list {
+        margin-top: 44px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 24px;
+        @media (max-width:768px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            a {
+                &:hover {
+                    color: lighten(variaveis.$corTextPrincipal, 20%);
+                }
+            }
+            img {
+                max-height: 200px;
+                max-width: 100%;
+                border-radius: 4px;
+            }
+        }
+    }
+
+    h2 {
+        text-align: center;
+    }
+}

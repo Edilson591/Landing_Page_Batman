@@ -10,8 +10,7 @@
     padding: 0 36px;
 
     @media (max-width:768px) {
-            backdrop-filter: blur(3px);
-            border-bottom: 2px solid;
+         
         &--is-active {
             backdrop-filter: blur(3px);
             height: 100vh;
@@ -35,7 +34,7 @@
             &--is-active {
                 flex-direction: column;
                 align-items: flex-start;
-                backdrop-filter: blur(3px);
+                backdrop-filter: blur(0px);
             }
 
 

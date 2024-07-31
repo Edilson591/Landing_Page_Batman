@@ -5,6 +5,26 @@ document.addEventListener("DOMContentLoaded", () => {
     const nav = document.querySelector(".header__nav");
     const links = document.querySelector(".header__links");
 
+    const hero = document.querySelector('.hero');
+
+    const heighHero = hero.clientHeight;
+
+    document.addEventListener("scroll", ()=> {
+        const reallyHeight =  window.scrollY;
+        const checkWidth = window.innerWidth;
+
+        if(reallyHeight > heighHero){
+            const header = document.querySelector(".header")
+            header.style.backdropFilter = 'blur(3px)';
+        }else {
+            header.style.backdropFilter = 'none';
+            if(checkWidth <= 768){
+                header.style.backdropFilter = 'blur(3px)';
+            }
+        }
+    })
+
+
 
     function handleMenu(e) {
         if (e.type === "touchstart") e.preventDefault();
